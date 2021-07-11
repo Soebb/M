@@ -12,6 +12,10 @@ token = os.environ.get('BOT_TOKEN')
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
+def index
+  head 200
+end
+
 class Audio:
     def __init__(self, bot, update):
         self.bot = bot
