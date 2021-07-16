@@ -76,7 +76,7 @@ def change_caption(bot, update):
 
 def start(bot, update):
     bot.sendMessage(chat_id=update.message.chat_id,
-                    text='Hi !  I am Music Channel Manager Bot!  I can add a dynamic caption to the musics, just add me to a channel as admin and give me the permissions.')
+                    text='Hi !  I am Music Channel Manager\nI can add a dynamic caption to the musics, just add me to a channel as admin and give me the permissions.')
 
 handler = MessageHandler(Filters.audio, change_caption, channel_post_updates=True, message_updates=False)
 handlers = CommandHandler('start', start)
