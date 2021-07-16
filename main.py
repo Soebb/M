@@ -12,9 +12,6 @@ token = os.environ.get('BOT_TOKEN')
 updater = Updater(token)
 dispatcher = updater.dispatcher
 
-def index
-  head 200
-end
 
 class Audio:
     def __init__(self, bot, update):
@@ -78,12 +75,11 @@ def change_caption(bot, update):
 
 
 def start(bot, update):
-    reply = "Hi !  I am Music Channel Manager Bot!  I can add a dynamic caption to the musics, just add me to a channel as admin and give me the permissions."
-    bot.send_message(chat_id = update.message.chat_id, text = reply)
-
+    bot.sendMessage(chat_id=update.message.chat_id,
+                    text='Hi !  I am Music Channel Manager Bot!  I can add a dynamic caption to the musics, just add me to a channel as admin and give me the permissions.')
 
 handler = MessageHandler(Filters.audio, change_caption, channel_post_updates=True, message_updates=False)
-handlers = CommandHandler("start", start)
+handlers = CommandHandler('start', start)
 dispatcher.add_handler(handler=handler)
 dispatcher.add_handler(handler=handlers)
 
